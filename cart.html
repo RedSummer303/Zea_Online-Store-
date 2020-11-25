@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<htm lang="en">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=egde">
+        <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <title>Shoping Cart</title>
+    </head>
+
+    <body>
+        <h1>This is the Cart</h1>
+
+        <header>
+            <div class="overlay"></div>
+            <nav>
+                <h2>Shop</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li class="cart">
+                        <a href="cart.html">
+                            <ion-icon name="basket"></ion-icon>Cart<span>0</span></a>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Products
+                              <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="#">Wooden Block1</a>
+                                <a href="#">Wooden Block2</a>
+                                <a href="#">Wooden Block3</a>
+                            </div>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+        <div class="products-container">
+            <div class="products-header">
+                <h5 class="products-title">PRODUCTS</h5>
+                <h5 class="price">PRICE</h5>
+                <h5 class="quantity">QUANTITY</h5>
+                <h5 class="total">TOTAL</h5>
+
+            </div>
+            <div class="products2">
+
+            </div>
+        </div>
+        <div>
+            Promo Code: <input type="text" style.display='block' style="width:auto;" id="promocode" />
+        </div>
+        <div>
+            <button class="button" id='update' style.display='block' style="width:auto;">Update Price</button>
+        </div>
+        <br>
+
+
+        <!-- Calculate Shipping and Total price   -->
+        <h1>Purchase Price:</h1>
+
+        <form>
+            <label>Price:</label><input type="text" id="price" />
+            <button class="button" id="calculate">Calculate Shipping</button>
+
+            <label>Total:</label>
+            <input type="text" id="total" disabled="disabled" />
+        </form>
+        <br>
+
+
+        <!-- Calculating Reference Number -->
+        <h3> Get Your Reference Number</h3>
+        <button class="button" onclick="myFunction()">Confirm order</button>
+
+        <p id="demo"></p>
+
+        <script>
+            function myFunction() {
+                let d = new Date();
+                let n = d.valueOf();
+                document.getElementById("demo").innerHTML = n;
+                confirm("Your Order is Succesful!");
+
+            }
+        </script>
+
+
+    </body>
+    <script type="text/javascript" src="main.js"></script>
+    <!-- https://www.w3schools.com/js/tryit.asp?filename=tryjs_alert 
+    
+    https://www.codeproject.com/Questions/1158283/Create-shopping-cart-using-javascript -->
+</htm>

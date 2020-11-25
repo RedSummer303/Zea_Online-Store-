@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<htm lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=egde">
+        <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+
+        <title>Shoping Cart</title>
+    </head>
+
+    <body>
+        <h1>This is the Home Page</h1>
+    </body>
+    <header>
+        <div class="overlay"></div>
+        <nav>
+            <h2>Shop</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li class="cart">
+                    <a href="cart.html">
+                        <ion-icon name="basket"></ion-icon>Cart<span>0</span></a>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Products
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Wooden Block1</a>
+                            <a href="#">Wooden Block2</a>
+                            <a href="#">Wooden Block3</a>
+                        </div>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <div class="container">
+        <div class="image">
+            <img src="images\w1.jpg" alt="thsirt1" with="300" height="300">
+            <h3>Wooden Block1</h3>
+            <h3>R 3500</h3>
+            <a class="add-cart cart1" href="#">Add Cart</a>
+        </div>
+
+        <div class="image">
+            <img src="images\w2.jpg" alt="thsirt2" with="300" height="300">
+            <h3>Wooden Block2</h3>
+            <h3>R 4500</h3>
+            <a class="add-cart cart2" href="#">Add Cart</a>
+
+        </div>
+        <div class="image">
+            <img src="images\w3.jpg" alt="thsirt3" with="300" height="300">
+            <h3>Wooden Block3</h3>
+            <h3>R 2500</h3>
+            <a class="add-cart cart3" href="#">Add Cart</a>
+        </div>
+        <a class="button" id='update' style.display='block' style="width:auto;" href="cart.html">Confirm Order</a>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("#p1").css("color", "red").slideDown(2000).slideUp(2000);
+            });
+        });
+    </script>
+    <button>Load More</button>
+    <p id="p1">No More Products</p>
+    </div>
+
+    </head>
+
+    <body>
+
+        <script type="text/javascript" src="main.js"></script>
+
+</htm>
